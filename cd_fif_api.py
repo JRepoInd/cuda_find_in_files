@@ -2,7 +2,7 @@
 Authors:
     Andrey Kvichansky    (kvichans on github.com)
 Version:
-    '3.1.20 2020-03-16'
+    '3.1.21 2023-12-27'
 ToDo: (see end of file)
 '''
 
@@ -14,7 +14,7 @@ import  cudatext            as app
 from    cudatext        import ed
 import  cudax_lib           as apx
 from    .cd_plug_lib        import *
-from    .chardet.universaldetector import UniversalDetector
+from    chardet.universaldetector import UniversalDetector
 
 OrdDict = collections.OrderedDict
 
@@ -837,12 +837,12 @@ def fold_all_roots(rpt_ed:app.Editor, what1:str, what2:str):
     
     # Waiting
     pass;                      #RPTLOG and log('?? fold',)
-    fold_rngs = rpt_ed.folding(app.FOLDING_GET_LIST)
+    fold_rngs = rpt_ed.folding(app.FOLDING_ENUM)
     if not fold_rngs: 
         for loop in range(10):
             time.sleep(0.1)
             app.app_idle()
-            if rpt_ed.folding(app.FOLDING_GET_LIST):
+            if rpt_ed.folding(app.FOLDING_ENUM):
                 pass;          #RPTLOG and log('wait ok loop={}',loop)
                 break
         else:
