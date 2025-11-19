@@ -2,7 +2,7 @@
 Authors:
     Andrey Kvichansky    (kvichans on github.com)
 Version:
-    '3.1.26 2023-12-28'
+    '3.1.27 2025-11-19'
 ToDo: (see end of file)
 '''
 
@@ -2425,9 +2425,9 @@ class FifD:
             ed.set_prop(app.PROP_ENC,       'UTF-8')
             ed.set_prop(app.PROP_TAB_TITLE, _('Results'))
             ed.set_text_all(self.rslt.get_text_all())
-            mrks    = self.rslt.attr(app.MARKERS_GET)
-            for mrk in (mrks if mrks else []):
-                ed.attr(app.MARKERS_ADD, *mrk)
+            mrks    = self.rslt.attr(app.MARKERS_GET_DICT)
+            for mrk in mrks:
+                ed.attr(app.MARKERS_ADD, **mrk)
             ed.set_prop(app.PROP_LEXER_FILE, FIF_LEXER)
             ed.set_prop(app.PROP_TAB_SIZE  , 1)
             return None
