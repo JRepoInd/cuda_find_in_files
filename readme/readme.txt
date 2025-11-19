@@ -1,4 +1,4 @@
-Plugin "Find in Files" for CudaText. Gives dialog to search/replace in multiple files.
+Plugin "Find in Files v3" for CudaText. Gives dialog to search/replace in multiple files.
 
 - Supports usual search and regex. Regex are from Python, groups are \0...\9.
 - Can save current options to "presets".
@@ -16,3 +16,4 @@ Notes:
 - Files are handled line by line, so can't find/replace multiline matches, with line-end chars.
 
 Author: A.Kvichanskiy (kvichans at forum/github)
+License: MIT
