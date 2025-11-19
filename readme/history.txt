@@ -1,3 +1,6 @@
+3.1.27 (2025-11-19)
+fixed: avoid deprecated API
+
 3.1.26 (2023-12-27)
 fixed: avoid deprecated API
 fixed: removed module 'chardet' which is included in CudaText anyway
