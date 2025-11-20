@@ -2,7 +2,7 @@
 Authors:
     Andrey Kvichansky    (kvichans on github.com)
 Version:
-    '3.1.27 2025-11-19'
+    '3.1.28 2025-11-20'
 ToDo: (see end of file)
 '''
 
@@ -2873,7 +2873,7 @@ class CodeTreeAg:
         ok_scan = self.ed.action(app.EDACTION_LEXER_SCAN, 0)
         ok_fill = self.ed.action(app.EDACTION_CODETREE_FILL, self.tr)
     #   print("tid=",tid,"self.ed=",self.ed,"CODETREE_FILL is",ok)
-        nodes = app.tree_proc(self.tr, app.TREE_ITEM_ENUM, 0)
+        # nodes = app.tree_proc(self.tr, app.TREE_ITEM_ENUM_EX, 0) # Alexey at 2025.11.20: seems it's dead var, not used
         
        #def parse_text
 
