@@ -2,7 +2,7 @@
 Authors:
     Andrey Kvichansky    (kvichans on github.com)
 Version:
-    '3.1.21 2023-12-27'
+    '3.1.29 2026-08-07'
 ToDo: (see end of file)
 '''
 
@@ -588,8 +588,7 @@ def nav_as(path, ed_as):
 def nav_to_frag(op_ed, rw, cl, ln, how_act='', indent_vert=-5):
     unfold_line(op_ed, rw)
     if cl!=-1:
-#       op_ed.set_prop(app.PROP_COLUMN_LEFT, '0')
-        op_ed.set_prop(app.PROP_SCROLL_HORZ, '0')
+        op_ed.set_prop(app.PROP_SCROLL_HORZ_INFO, {'smooth_pos': 0})
 
     if False:pass
     elif rw==-1:
